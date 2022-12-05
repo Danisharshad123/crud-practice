@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { ApiService } from '../shared/api.service';
+import { brandmodel } from './brand.module';
 
 @Component({
   selector: 'app-brands-component',
@@ -7,14 +9,33 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./brands-component.component.css']
 })
 export class BrandsComponentComponent {
+  brandvalue:FormGroup =  new FormGroup({
+    mobilename: new FormControl(),
+    mobilemodel: new FormControl(),
+    mobilemake: new FormControl(),
+    mobileprice: new FormControl(),
+  })
+  brandobj:brandmodel=new brandmodel
+
   
-  brandvalue! :FormGroup
-  
-  constructor(private form:FormBuilder ){}
+  constructor(private form:FormBuilder, private api:ApiService ){}
 
 
   ngOnInit():void{
 
+
   }
+
+    AddBrand(){
+      this.brandobj.mobilename=this.brandvalue.value.mobilename;
+      this.brandobj.mobilemodel=this.brandvalue.value.mobilemodel;
+      this.brandobj.mobilemake=this.brandvalue.value.mobilemake;
+      this.brandobj.mobileprice=this.brandvalue.value.mobileprice;
+      this.api.postbrand(this.brandobj).subscribe({next:(v)=>{
+        console.log(v);
+      }})
+    }
+    
+
 
 }
