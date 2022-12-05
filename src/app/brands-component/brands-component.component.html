@@ -26,10 +26,10 @@
             <td>Samsung</td>
             <td>J7</td>
             <td>China</td>
-            <td>$200</td>
+            <td>$2000</td>
             <td>
-                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Edit" class="btn btn-outline-dark mx-2">
-                <input type="button" value="Delete" class="btn btn-outline-dark">
+                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Edit" class="btn btn-outline-info mx-2">
+                <input type="button" value="Delete" class="btn btn-outline-danger">
             </td>
           </tr>
           <tr>
@@ -39,38 +39,50 @@
             <td>Apple</td>
             <td>$5000</td>
             <td>
-                <input type="button" value="Edit" class="btn btn-outline-dark mx-2">
-                <input type="button" value="Delete" class="btn btn-outline-dark">
+                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Edit" class="btn btn-outline-info mx-2">
+                <input type="button" value="Delete" class="btn btn-outline-danger">
             </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@fat</td>
-            <td>@twitter</td>
           </tr>
         </tbody>
       </table>
 </div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
+<!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Brands Registration</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Mobile Name</label>
+                  <input type="mobile name" class="form-control" id="exampleInputEmail1" placeholder="Enter mobile name">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobile Model</label>
+                    <input type="mobile model" class="form-control" id="exampleInputEmail1" placeholder="Enter mobile model">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobile Make</label>
+                    <input type="mobile make" class="form-control" id="exampleInputEmail1"placeholder="Enter mobile make">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobile Price</label>
+                    <input type="mobile price" class="form-control" id="exampleInputEmail1"placeholder="Enter mobile price">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+              </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Done</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-info">Done</button>
         </div>
       </div>
     </div>
   </div>
+  

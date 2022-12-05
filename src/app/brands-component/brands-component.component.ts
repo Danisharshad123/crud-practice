@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { formBuilder, } from '@angular/forms';
 
 @Component({
   selector: 'app-brands-component',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./brands-component.component.css']
 })
 export class BrandsComponentComponent {
+  
+  
+  constructor(private ){}
+
+
+
+  ngOnInit():void{
+
+  }
 
 }
