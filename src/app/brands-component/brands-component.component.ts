@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { formBuilder, } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-brands-component',
@@ -8,9 +8,9 @@ import { formBuilder, } from '@angular/forms';
 })
 export class BrandsComponentComponent {
   
+  brandvalue! :FormGroup
   
-  constructor(private ){}
-
+  constructor(private form:FormBuilder ){}
 
 
   ngOnInit():void{
