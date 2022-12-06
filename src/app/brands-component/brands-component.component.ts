@@ -40,7 +40,8 @@ export class BrandsComponentComponent {
       },
       complete:()=>{
         console.log ("Product Added")
-        alert("Product Added Successful")
+        alert("Product Added Successful");
+       this.Getbrand();
       }})}
 
       Getbrand(){
@@ -49,7 +50,28 @@ export class BrandsComponentComponent {
         })
 
         }
+      DeleteBrand(data:any){
+        this.api.deletebrand(data.id).subscribe({next:(v)=>{
+          console.log(v);
+        },
+          error: (e: any) =>{
+          console.log(e)
+        },
+        complete:()=>{
+          console.log ("Product Added")
+          alert("Product Added Successful");
+         this.Getbrand();
+        }})}
+        editBrand(data:any){
+          this.brandvalue.controls["mobilename"].setValue(data.mobilename);
+          this.brandvalue.controls["mobilemodel"].setValue(data.mobilename);
+          this.brandvalue.controls["mobilemake"].setValue(data.mobilename);
+          this.brandvalue.controls["mobileprice"].setValue(data.mobilename);
+          this.brandobj.id = data.id;
+        
+        }
       }
+      
    
     
 

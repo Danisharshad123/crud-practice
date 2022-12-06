@@ -1,25 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "mobilename": null,
-      "mobilemodel": null,
-      "mobilemake": null,
-      "mobileprice": null
-    },
-    {
-      "id": 3,
-      "mobilename": "Samsung",
-      "mobilemodel": "3009",
-      "mobilemake": "Hubgry",
-      "mobileprice": "200000"
-    }
-  ],
+  "posts": [],
   "comments": [
     {
       "id": 1,

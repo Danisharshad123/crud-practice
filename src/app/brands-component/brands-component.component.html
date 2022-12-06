@@ -21,26 +21,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor=" let brand of Brandlist">
-            <th scope="row">{{brand.id}}</th>
-            <td>{{brand.mobilename}}</td>
-            <td>{{brand.mobilemodel}}</td>
-            <td>{{brand.mobilemake}</td>
-            <td>{{brand.mobileprice}}</td>
+          <tr *ngFor=" let brandlist of Brandlist">
+            <th scope="row">{{brandlist.id}}</th>
+            <td>{{brandlist.mobilename}}</td>
+            <td>{{brandlist.mobilemodel}}</td>
+            <td>{{brandlist.mobilemake}}</td>
+            <td>{{brandlist.mobileprice}}</td>
             <td>
                 <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Edit" class="btn btn-outline-info mx-2">
-                <input type="button" value="Delete" class="btn btn-outline-danger">
+                <input type="button" value="Delete" (click)="DeleteBrand(brandlist)"  class="btn btn-outline-danger">
             </td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>I-phone</td>
-            <td>14-pro-max</td>
-            <td>Apple</td>
-            <td>$5000</td>
+         
             <td>
-                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Edit" class="btn btn-outline-info mx-2">
-                <input type="button" value="Delete" class="btn btn-outline-danger">
+  
             </td>
           </tr>
         </tbody>
