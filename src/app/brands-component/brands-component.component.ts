@@ -70,18 +70,18 @@ export class BrandsComponentComponent {
           this.brandvalue.controls["mobilemake"].setValue(data.mobilename);
           this.brandvalue.controls["mobileprice"].setValue(data.mobilename);
           this.brandobj.id = data.id;
-          this.showupdate
+          this.showupdate();
         
         }
    
 
-        UpdateBrand(){
+        Updatebrand(){
           
             this.brandobj.mobilename=this.brandvalue.value.mobilename;
             this.brandobj.mobilemodel=this.brandvalue.value.mobilemodel;
             this.brandobj.mobilemake=this.brandvalue.value.mobilemake;
             this.brandobj.mobileprice=this.brandvalue.value.mobileprice;
-            this.api.putbrand(this.brandobj,this.brandobj.id).subscribe({next:(v)=>{
+            this.api.putbrand(this.brandobj, this.brandobj.id).subscribe({next:(v)=>{
               console.log(v);
             },
               error: (e: any) =>{
@@ -89,7 +89,7 @@ export class BrandsComponentComponent {
             },
             complete:()=>{
               console.log ("Product Added")
-              alert("Product Added Successful");
+              alert("Product Udate Successful");
              this.Getbrand();
              this.brandvalue.reset();
              this.showbuton();

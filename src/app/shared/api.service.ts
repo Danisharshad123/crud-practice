@@ -24,7 +24,7 @@ export class ApiService {
               }
               )))}
               putbrand(data:any,id:number){
-                return this.api.put<any>("http://localhost:3000/posts/"+id,data).pipe(
+                return this.api.put<any>("http://localhost:3000/posts/"+id, data).pipe(
                   map(
                     (res =>{
                       return res
