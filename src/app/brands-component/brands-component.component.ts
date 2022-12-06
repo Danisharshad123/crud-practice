@@ -16,6 +16,7 @@ export class BrandsComponentComponent {
     mobileprice: new FormControl(),
   })
   brandobj:brandmodel=new brandmodel
+  Brandlist:any =[]
 
   
   constructor(private form:FormBuilder, private api:ApiService ){}
@@ -33,9 +34,24 @@ export class BrandsComponentComponent {
       this.brandobj.mobileprice=this.brandvalue.value.mobileprice;
       this.api.postbrand(this.brandobj).subscribe({next:(v)=>{
         console.log(v);
-      }})
-    }
+      },
+        error: (e: any) =>{
+        console.log(e)
+      },
+      complete:()=>{
+        console.log ("Product Added")
+        alert("Product Added Successful")
+      }})}
+
+      Getbrand(){
+        this.api.getbrand().subscribe(res=>{
+          this.Brandlist=res;
+        })
+
+        }
+      }
+   
     
 
 
-}
+

@@ -21,12 +21,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Samsung</td>
-            <td>J7</td>
-            <td>China</td>
-            <td>$2000</td>
+          <tr *ngFor=" let brand of Brandlist">
+            <th scope="row">{{brand.id}}</th>
+            <td>{{brand.mobilename}}</td>
+            <td>{{brand.mobilemodel}}</td>
+            <td>{{brand.mobilemake}</td>
+            <td>{{brand.mobileprice}}</td>
             <td>
                 <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Edit" class="btn btn-outline-info mx-2">
                 <input type="button" value="Delete" class="btn btn-outline-danger">
@@ -55,32 +55,32 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
+            <form [formGroup]="brandvalue">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Mobile Name</label>
-                  <input type="mobile name" class="form-control" id="exampleInputEmail1" placeholder="Enter mobile name">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  <input type="mobilename" class="form-control" id="exampleInputEmail1" formControlName="mobilename" placeholder="Enter mobile name">
+
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Mobile Model</label>
-                    <input type="mobile model" class="form-control" id="exampleInputEmail1" placeholder="Enter mobile model">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <input type="mobilemodel" class="form-control" formControlName="mobilemodel" id="exampleInputEmail1" placeholder="Enter mobile model">
+                 
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Mobile Make</label>
-                    <input type="mobile make" class="form-control" id="exampleInputEmail1"placeholder="Enter mobile make">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <input type="mobilemake" class="form-control" formControlName="mobilemake" id="exampleInputEmail1"placeholder="Enter mobile make">
+                   
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Mobile Price</label>
-                    <input type="mobile price" class="form-control" id="exampleInputEmail1"placeholder="Enter mobile price">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <input type="mobileprice" class="form-control" formControlName="mobileprice" id="exampleInputEmail1"placeholder="Enter mobile price">
+                  
                   </div>
               </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-info">Done</button>
+          <button type="button" class="btn btn-outline-info" (click)="AddBrand()">Done</button>
         </div>
       </div>
     </div>
