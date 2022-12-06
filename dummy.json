@@ -1,25 +1,18 @@
 {
   "posts": [
     {
-      "id": 1,
-      "mobilename": "I-phone",
-      "mobilemodel": "14 pro max",
-      "mobilemake": "Apple",
-      "mobileprice": "$15000"
+      "id": 5,
+      "mobilename": "cvcvcv",
+      "mobilemodel": null,
+      "mobilemake": null,
+      "mobileprice": null
     },
     {
-      "id": 2,
-      "mobilename": "Samsung",
-      "mobilemodel": "J7",
-      "mobilemake": "Hungry",
-      "mobileprice": "$10000"
-    },
-    {
-      "id": 3,
-      "mobilename": "Nokia",
-      "mobilemodel": "v100",
-      "mobilemake": "China",
-      "mobileprice": "$7000"
+      "id": 6,
+      "mobilename": "hjhh",
+      "mobilemodel": null,
+      "mobilemake": null,
+      "mobileprice": null
     }
   ],
   "comments": [
