@@ -17,6 +17,8 @@ export class BrandsComponentComponent {
   })
   brandobj:brandmodel=new brandmodel
   Brandlist:any =[]
+  butononsave = true
+  buttononupdate = false
 
   
   constructor(private form:FormBuilder, private api:ApiService ){}
@@ -68,9 +70,43 @@ export class BrandsComponentComponent {
           this.brandvalue.controls["mobilemake"].setValue(data.mobilename);
           this.brandvalue.controls["mobileprice"].setValue(data.mobilename);
           this.brandobj.id = data.id;
+          this.showupdate
         
         }
-      }
+   
+
+        UpdateBrand(){
+          
+            this.brandobj.mobilename=this.brandvalue.value.mobilename;
+            this.brandobj.mobilemodel=this.brandvalue.value.mobilemodel;
+            this.brandobj.mobilemake=this.brandvalue.value.mobilemake;
+            this.brandobj.mobileprice=this.brandvalue.value.mobileprice;
+            this.api.putbrand(this.brandobj,this.brandobj.id).subscribe({next:(v)=>{
+              console.log(v);
+            },
+              error: (e: any) =>{
+              console.log(e)
+            },
+            complete:()=>{
+              console.log ("Product Added")
+              alert("Product Added Successful");
+             this.Getbrand();
+             this.brandvalue.reset();
+             this.showbuton();
+             this.brandobj.id = 0
+      
+
+            }})}
+            showbuton(){
+              this.butononsave = true;
+              this.buttononupdate = false;
+              }
+              showupdate(){
+                this.butononsave = false;
+                this.buttononupdate = true;
+              }
+        }
+      
       
    
     

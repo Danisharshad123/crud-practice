@@ -1,5 +1,41 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 2,
+      "mobilename": "erreewwr",
+      "mobilemodel": "ss",
+      "mobilemake": "ss",
+      "mobileprice": ""
+    },
+    {
+      "id": 3,
+      "mobilename": "erreewwr",
+      "mobilemodel": "ss",
+      "mobilemake": "ss",
+      "mobileprice": ""
+    },
+    {
+      "id": 4,
+      "mobilename": "erreewwr",
+      "mobilemodel": "ss",
+      "mobilemake": "ss",
+      "mobileprice": ""
+    },
+    {
+      "id": 5,
+      "mobilename": "erreewwr",
+      "mobilemodel": "ss",
+      "mobilemake": "ss",
+      "mobileprice": ""
+    },
+    {
+      "id": 6,
+      "mobilename": "erreewwr",
+      "mobilemodel": null,
+      "mobilemake": null,
+      "mobileprice": null
+    }
+  ],
   "comments": [
     {
       "id": 1,
