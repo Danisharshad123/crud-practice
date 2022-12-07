@@ -1,32 +1,11 @@
 {
   "posts": [
     {
-      "id": 1,
-      "mobilename": "ss",
-      "mobilemodel": "ss",
-      "mobilemake": "ss",
-      "mobileprice": "10000"
-    },
-    {
       "id": 2,
-      "mobilename": "erreewwr",
-      "mobilemodel": "erreewwr",
-      "mobilemake": null,
-      "mobileprice": null
-    },
-    {
-      "id": 3,
-      "mobilename": null,
-      "mobilemodel": "aa",
-      "mobilemake": null,
-      "mobileprice": null
-    },
-    {
-      "id": 4,
-      "mobilename": "ss",
-      "mobilemodel": null,
-      "mobilemake": null,
-      "mobileprice": null
+      "mobilename": "JLJL",
+      "mobilemodel": "JKLK",
+      "mobilemake": "JKJKLJKLJKLKL",
+      "mobileprice": "HKHKH"
     }
   ],
   "comments": [
