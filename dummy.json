@@ -1,5 +1,13 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 1,
+      "mobilename": "ddsd",
+      "mobilemodel": "dsddsd",
+      "mobilemake": "sddsds",
+      "mobileprice": "ddss"
+    }
+  ],
   "comments": [
     {
       "id": 1,
