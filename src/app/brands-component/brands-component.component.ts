@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ApiService } from '../shared/api.service';
@@ -21,11 +22,11 @@ export class BrandsComponentComponent {
   buttononupdate = false
 
   
-  constructor(private form:FormBuilder, private api:ApiService ){}
+  constructor(private form:FormBuilder, private api:ApiService){}
 
 
   ngOnInit():void{
-
+    this.Getbrand();
 
   }
 
