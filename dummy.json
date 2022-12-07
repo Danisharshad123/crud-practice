@@ -1,20 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 5,
-      "mobilename": "cvcvcv",
-      "mobilemodel": null,
-      "mobilemake": null,
-      "mobileprice": null
-    },
-    {
-      "id": 6,
-      "mobilename": "hjhh",
-      "mobilemodel": null,
-      "mobilemake": null,
-      "mobileprice": null
-    }
-  ],
+  "posts": [],
   "comments": [
     {
       "id": 1,
