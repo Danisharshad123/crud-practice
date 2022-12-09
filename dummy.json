@@ -1,13 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 2,
-      "mobilename": "JLJL",
-      "mobilemodel": "JKLK",
-      "mobilemake": "JKJKLJKLJKLKL",
-      "mobileprice": "HKHKH"
-    }
-  ],
+  "posts": [],
   "comments": [
     {
       "id": 1,
