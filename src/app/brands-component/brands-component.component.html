@@ -22,15 +22,15 @@
         </thead>
       
         <tbody>
-          <tr *ngFor=" let brandlist of Brandlist">
-            <th scope="row">{{brandlist.id}}</th>
-            <td>{{brandlist.mobilename}}</td>
-            <td>{{brandlist.mobilemodel}}</td>
-            <td>{{brandlist.mobilemake}}</td>
-            <td>{{brandlist.mobileprice}}</td>
+          <tr >
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>
-                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editBrand(brandlist)" value="Edit" class="btn btn-outline-info mx-2">
-                <input type="button" value="Delete" (click)="DeleteBrand(brandlist)"  class="btn btn-outline-danger">
+                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"value="Edit" class="btn btn-outline-info mx-2">
+                <input type="button" value="Delete"   class="btn btn-outline-danger">
             </td>
           </tr>
           <tr>
@@ -51,7 +51,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form [formGroup]="brandvalue">
+            <form>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Mobile Name</label>
                   <input type="mobilename" class="form-control" id="exampleInputEmail1" formControlName="mobilename" placeholder="Enter mobile name">
@@ -76,8 +76,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-info" (click)="AddBrand()">Done</button>
-          <button type="button" class="btn btn-outline-info" (click)="Updatebrand()">Update</button>
+          <button type="button" class="btn btn-outline-info">Done</button>
+          <button type="button" class="btn btn-outline-info">Update</button>
 
           
         </div>
