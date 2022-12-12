@@ -22,14 +22,14 @@
         </thead>
       
         <tbody>
-          <tr >
+          <tr *ngFor=" let list of BrandList">
             <th scope="row"></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{list.mobilename}}</td>
+            <td>{{list.mobilemodel}}</td>
+            <td>{{list.mobilemake}}</td>
+            <td>{{list.mobileprice}}</td>
             <td>
-                <input type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"value="Edit" class="btn btn-outline-info mx-2">
+                <input type="button" data-bs-toggle="modal" (click)="EditBrand(list)" data-bs-target="#exampleModal"value="Edit" class="btn btn-outline-info mx-2">
                 <input type="button" value="Delete"   class="btn btn-outline-danger">
             </td>
           </tr>
@@ -76,8 +76,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-info">Done</button>
-          <button type="button" class="btn btn-outline-info">Update</button>
+          <button type="button" class="btn btn-outline-info" (click)="Addbrand()">Done</button>
+          <button type="button" class="btn btn-outline-info" (click)="UpdateBrand()">Update</button>
 
           
         </div>

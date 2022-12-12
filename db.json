@@ -4,6 +4,41 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "id": 2,
+      "mobilename": "sss",
+      "mobilemodel": null,
+      "mobilemake": null,
+      "mobileprice": null
+    },
+    {
+      "id": 3,
+      "mobilename": "ff",
+      "mobilemodel": null,
+      "mobilemake": null,
+      "mobileprice": null
+    },
+    {
+      "id": 4,
+      "mobilename": "ff",
+      "mobilemodel": "ftfrt",
+      "mobilemake": null,
+      "mobileprice": null
+    },
+    {
+      "id": 5,
+      "mobilename": "ff",
+      "mobilemodel": "ftfrt",
+      "mobilemake": null,
+      "mobileprice": "666666"
+    },
+    {
+      "id": 6,
+      "mobilename": "ff",
+      "mobilemodel": "ftfrt",
+      "mobilemake": "jkljl",
+      "mobileprice": "666666"
     }
   ],
   "comments": [
