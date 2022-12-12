@@ -22,7 +22,7 @@ export class BrandsComponentComponent {
 
 
   ngOnInit():void{
-  
+    this.GetStudent();
   }
 
 
@@ -66,7 +66,7 @@ export class BrandsComponentComponent {
       complete:() => {
         console.log("Student Record Delete!")
         alert("Student Record Delete")
-        this.BrandList();
+        this.GetStudent();
     
       }})}
 
@@ -74,6 +74,7 @@ export class BrandsComponentComponent {
         this.Products.controls["mobilename"].setValue(data.mobilename);
         this.Products.controls["mobilemodel"].setValue(data.mobilemodel);
         this.Products.controls["mobilemake"].setValue(data.mobilemake);
+        this.Products.controls["mobileprice"].setValue(data.mobileprice);
         this.BrandsValue.id = data.id;
       }
 
@@ -82,7 +83,7 @@ export class BrandsComponentComponent {
         this. BrandsValue.mobilemodel= this.Products.value.mobilemodel;
         this. BrandsValue.mobilemake= this.Products.value.mobilemake;
         this. BrandsValue.mobileprice= this.Products.value.mobileprice;
-        this._api.Postdata(this.BrandsValue).subscribe({next : (v) => {
+        this._api.Putdata(  this.BrandsValue, this.BrandsValue.id ).subscribe({next : (v) => {
           console.log(v);
         },
         error: (e) => {

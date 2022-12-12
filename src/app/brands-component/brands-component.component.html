@@ -30,7 +30,7 @@
             <td>{{list.mobileprice}}</td>
             <td>
                 <input type="button" data-bs-toggle="modal" (click)="EditBrand(list)" data-bs-target="#exampleModal"value="Edit" class="btn btn-outline-info mx-2">
-                <input type="button" value="Delete"   class="btn btn-outline-danger">
+                <input type="button" value="Delete" (click)="DeleteStudent(list)"  class="btn btn-outline-danger">
             </td>
           </tr>
           <tr>
